@@ -70,7 +70,19 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-
+.link-desc-popup:hover{
+	color: red;
+}
+.link-desc-popup:hover + .hidden-pop-up{
+	color: white;
+	opacity: 80%;
+	transition: opacity 0.7s;
+}
+.link-desc-popup + .hidden-pop-up{
+	opacity: 0%;
+	border-bottom-color: transparent;
+	transition: opacity 1s;
+}
 /* Basic */
 
 	@-ms-viewport {
