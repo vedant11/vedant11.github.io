@@ -70,7 +70,17 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-
+.link-desc-popup:hover{
+	color: red;
+}
+.link-desc-popup:hover + .hidden-pop-up{
+	visibility: visible;
+	color: white;
+}
+.link-desc-popup + .hidden-pop-up{
+	visibility: hidden;
+	border-bottom-color: transparent;
+}
 /* Basic */
 
 	@-ms-viewport {
