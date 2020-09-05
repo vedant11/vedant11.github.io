@@ -74,12 +74,14 @@ input, select, textarea {
 	color: red;
 }
 .link-desc-popup:hover + .hidden-pop-up{
-	visibility: visible;
 	color: white;
+	opacity: 80%;
+	transition: opacity 0.7s;
 }
 .link-desc-popup + .hidden-pop-up{
-	visibility: hidden;
+	opacity: 0%;
 	border-bottom-color: transparent;
+	transition: opacity 1s;
 }
 /* Basic */
 
