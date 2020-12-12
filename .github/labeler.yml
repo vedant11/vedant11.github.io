@@ -1,0 +1,18 @@
+
+🐍 python:
+  - "**/*.py"
+  - "*.py"
+
+📝 documentation:
+  - "**/*.md"
+  - "*.md"
+
+🐳 docker:
+  - "Dockerfile"
+
+⚙ ci:
+  - ".github/**"
+  
+<> html:
+  - "**/*.html"
+  -"*.html"
