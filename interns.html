@@ -50,15 +50,20 @@
 
     <!-- Footer -->
     <footer id="footer" class="wrapper alt">
-        <div class="inner">
-            <ul class="menu">
-                <li>&copy; Untitled. All rights reserved.</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            </ul>
-        </div>
     </footer>
 
     <!-- Scripts -->
+        
+	<script>
+	fetch("./footer.html")
+		.then(response => {
+			return response.text()
+		})
+		.then(data => {
+			document.querySelector("#footer").innerHTML = data;
+	});
+	</script>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
