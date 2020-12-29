@@ -3,33 +3,36 @@
 
 <script>
 // Loading template
-fetch("./generic.html")
-    .then(response => {
-        return response.text()
-    })
-    .then(data => {
-        document.firstElementChild.innerHTML = data;
-});
-// Loading footer
-fetch("./footer.html")
-    .then(response => {
-        return response.text()
-    })
-    .then(data => {
-        document.querySelector("#footer").innerHTML = data;
-});
-// Loading header
-fetch("./header.html")
-    .then(response => {
-        return response.text()
-    })
-    .then(data => {
-        document.querySelector("#header").innerHTML = data;
-        // Changing head title
-        document.querySelector("#title").innerHTML="vedant11-hackathons";
-        // Changing Heading
-        document.getElementById("the-main-head").innerHTML="Hackathons";
-        // Changing image source
-        document.getElementById("cover-image").src="images/pic04.jpg";
+Promise.all([
+    fetch("./generic.html")
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            document.firstElementChild.innerHTML = data;
+    });
+    // Loading footer
+    fetch("./footer.html")
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            document.querySelector("#footer").innerHTML = data;
+    });
+    // Loading header
+    fetch("./header.html")
+        .then(response => {
+            return response.text()
+        })
+        .then(data => {
+            document.querySelector("#header").innerHTML = data;
+    });
+]).then(e=>{
+    // Changing head title
+    document.querySelector("#title").innerHTML="vedant11-hackathons";
+    // Changing Heading
+    document.getElementById("the-main-head").innerHTML="Hackathons";
+    // Changing image source
+    document.getElementById("cover-image").src="images/pic04.jpg";
 });
 </script>
