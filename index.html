@@ -92,7 +92,7 @@
 				<div class="content">
 					<div class="inner">
 						<h2>Academics and CCA</h2>
-						<p>They always want more. But you can't give everything!</p>
+						<p>In my justification, I am keeping a low profile.</p>
 						<ul class="actions">
 							<li><a href="acads.html" class="button">Learn more</a></li>
 						</ul>
@@ -211,14 +211,21 @@
 
 	<!-- Footer -->
 	<footer id="footer" class="wrapper style1-alt">
-		<div class="inner">
-			<ul class="menu">
-				<li>Art credits: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
+		
 	</footer>
 
 	<!-- Scripts -->
+
+	<script>
+	fetch("./footer.html")
+		.then(response => {
+			return response.text()
+		})
+		.then(data => {
+			document.querySelector("header").innerHTML = data;
+	});
+	</script>
+
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
