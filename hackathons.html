@@ -4,7 +4,21 @@
 <script>
 // Loading template
 Promise.all([
-    fetch("./generic.html")
+    fetch("./generic.html"),
+    fetch("./header.html"),
+    fetch("./footer.html")
+]).then(e=>{
+    console.log(e);
+    // Changing head title
+    // document.querySelector("#title").innerHTML="vedant11-hackathons";
+    // Changing Heading
+    // document.getElementById("the-main-head").innerHTML="Hackathons";
+    // Changing image source
+    // document.getElementById("cover-image").src="images/pic04.jpg";
+});
+
+/*
+fetch("./generic.html")
         .then(response => {
             return response.text()
         })
@@ -27,12 +41,5 @@ Promise.all([
         .then(data => {
             document.querySelector("#header").innerHTML = data;
     });
-]).then(e=>{
-    // Changing head title
-    document.querySelector("#title").innerHTML="vedant11-hackathons";
-    // Changing Heading
-    document.getElementById("the-main-head").innerHTML="Hackathons";
-    // Changing image source
-    document.getElementById("cover-image").src="images/pic04.jpg";
-});
+*/
 </script>
