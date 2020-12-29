@@ -1,5 +1,5 @@
 <head>
-    <title>vedant11-generic</title>
+    <title id="title"></title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -19,8 +19,11 @@
         <!-- Main -->
         <section id="main" class="wrapper">
             <div class="inner">
-                <h1 class="major">Generic</h1>
-                <span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
+                <h1 class="major" id="the-main-head"></h1>
+                <span class="image fit">
+					<img id="cover-image" 
+						src="" alt="coverimage"/>
+				</span>
             </div>
         </section>
 
@@ -31,24 +34,6 @@
     </footer>
 
     <!-- Scripts -->
-    
-	<script>
-	fetch("./footer.html")
-		.then(response => {
-			return response.text()
-		})
-		.then(data => {
-			document.querySelector("#footer").innerHTML = data;
-	});
-    fetch("./header.html")
-		.then(response => {
-			return response.text()
-		})
-		.then(data => {
-			document.querySelector("#header").innerHTML = data;
-	});
-	</script>
-
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
