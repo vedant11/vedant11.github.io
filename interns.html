@@ -1,75 +1,26 @@
-<!DOCTYPE HTML>
 <html>
-
-<head>
-    <title>vedant11-interns</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
-
-<body class="is-preload">
-
-    <!-- Header -->
-    <header id="header">
-    </header>
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Main -->
-        <section id="main" class="wrapper">
-            <div class="inner">
-                <h1 class="major">Interns</h1>
-                <span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-                <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque
-                    venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor
-                    sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu
-                    massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris.
-                    Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis,
-                    hendrerit tristique.</p>
-                <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet
-                    dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque
-                    leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum
-                    convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="wrapper alt">
-    </footer>
-
-    <!-- Scripts -->
-
-	<script>
-	fetch("./footer.html")
-		.then(response => {
-			return response.text()
-		})
-		.then(data => {
-			document.querySelector("#footer").innerHTML = data;
-	});
-    fetch("./header.html")
-        .then(response => {
-            return response.text()
-        })
-        .then(data => {
-            document.querySelector("#header").innerHTML = data;
-    });
-	</script>
-
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
-</body>
-
 </html>
+
+<script>
+// Loading template
+Promise.all([
+    fetch("./generic.html"),
+    fetch("./header.html"),
+    fetch("./footer.html")
+]).then(responses=>{
+    return Promise.all(responses.map(function (response) {
+        return response.text();
+    }));
+}).then(e=>{
+    document.firstElementChild.innerHTML = e[0];
+    document.querySelector("#header").innerHTML = e[1];
+    document.querySelector("#footer").innerHTML = e[2];
+    // Changing head title
+    document.querySelector("#title").innerHTML="vedant11-interns";
+    // Changing Heading
+    document.getElementById("the-main-head").innerHTML="interns";
+    // Changing image source
+    document.getElementById("cover-image").src="images/pic04.jpg";
+});
+
+</script>
