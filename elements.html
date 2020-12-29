@@ -16,14 +16,6 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html">Generic</a></li>
-						<li><a href="elements.html"  class="active">Elements</a></li>
-					</ul>
-				</nav>
 			</header>
 
 		<!-- Wrapper -->
@@ -354,6 +346,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				})
 				.then(data => {
 					document.querySelector("#footer").innerHTML = data;
+			});
+			fetch("./header.html")
+				.then(response => {
+					return response.text()
+				})
+				.then(data => {
+					document.querySelector("#header").innerHTML = data;
 			});
 			</script>
 
