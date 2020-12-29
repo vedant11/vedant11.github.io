@@ -25,11 +25,11 @@ fetch("./header.html")
     })
     .then(data => {
         document.querySelector("#header").innerHTML = data;
+        // Changing head title
+        document.querySelector("#title").innerHTML="vedant11-hackathons";
+        // Changing Heading
+        document.getElementById("the-main-head").innerHTML="Hackathons";
+        // Changing image source
+        document.getElementById("cover-image").src="images/pic04.jpg";
 });
-// Changing head title
-document.querySelector("#title").innerHTML="vedant11-hackathons";
-// Changing Heading
-document.querySelector("#the-main-head").innerHTML="Hackathons";
-// Changing image source
-document.querySelector("#cover-image").src="images/pic04.jpg";
 </script>
