@@ -4052,3 +4052,9 @@ body.is-preload #sidebar nav ul li {
 	}
 
 }
+
+/* Social */
+.sticky-floating-footer{
+	position: sticky;
+	top: 0;
+}
