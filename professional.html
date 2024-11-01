@@ -4,8 +4,8 @@
   // Loading template
   Promise.all([
     fetch("./generic.html"),
-    fetch("../components/header.html"),
-    fetch("../components/footer.html"),
+    fetch("./header.html"),
+    fetch("./footer.html"),
   ])
     .then((responses) => {
       return Promise.all(
