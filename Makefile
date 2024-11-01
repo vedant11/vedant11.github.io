@@ -12,6 +12,8 @@ copy-HTMLs:
 	cp ./components/* build
 	cp ./templates/* build
 	cp index.html build
+	sed -i '' -e 's|\.\./components/|./|g' -e 's|./components/|./|g' build/*.html
+	sed -i '' -e 's|\.\./templates/|./|g' -e 's|./templates/|./|g' build/*.html
 
 copy-CNAME:
 	cp CNAME build
