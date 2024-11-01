@@ -20,3 +20,7 @@ copy-CNAME:
 
 copy-resume:
 	cp vedant-panchal-resume.pdf build
+
+demo:
+	mkdir -p build/demo
+	cp components/unused/* build/demo/
