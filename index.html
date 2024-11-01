@@ -156,12 +156,10 @@
 
 	<script>
 		fetch("./components/footer.html")
-			.then(response =>
-			{
+			.then(response => {
 				return response.text()
 			})
-			.then(data =>
-			{
+			.then(data => {
 				document.querySelector("#footer").innerHTML = data;
 			});
 	</script>
