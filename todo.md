@@ -1,0 +1,3 @@
+- [ ] Font integration: Specific font style for a single replaced character
+- [ ] Micro activity on page: the title or favicon rotating a certain degrees at random timestamps
+- [ ] Feedback widget: Interface to drag to a certain direction for the category of feedback and shake for the degree of feedback
