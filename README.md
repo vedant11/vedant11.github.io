@@ -1,6 +1,6 @@
 # vedant11.github.io
 
-- Visit [`vedant11.io`](https://vedant11.io)
+- Visit [`vedant11.in`](https://vedant11.in)
 
 <h3 align="center" >OR</h3>
 
